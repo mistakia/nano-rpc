@@ -1,0 +1,28 @@
+{
+  "name": "nano-rpc",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "TEST=all mocha --exit",
+    "lint": "eslint . --ext js,mjs",
+    "prettier": "prettier --write ."
+  },
+  "dependencies": {
+    "node-fetch": "^3.2.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/eslint-parser": "^7.17.0",
+    "chai": "^4.3.6",
+    "eslint": "^8.12.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "mocha": "^9.2.2",
+    "prettier": "^2.6.2"
+  },
+  "packageManager": "yarn@3.2.0"
+}

@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+import fetch from 'cross-fetch'
 
 const request = async (options) => {
   const response = await fetch(options.url, options)

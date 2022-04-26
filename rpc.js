@@ -26,21 +26,23 @@ const POST = (data) => ({
   }
 })
 
+export const PUBLIC_RPC_URLS = [
+  'https://rpc.p2pow.online',
+  'https://rpc.nanoprofile.online',
+  'https://mynano.ninja/api/node',
+  'https://nault.nanos.cc/proxy',
+  'https://proxy.powernode.cc/proxy',
+  'https://api.nanex.cc',
+  'https://vault.nanocrawler.cc/api/node-api',
+  'https://node.somenano.com/proxy',
+  'https://proxy.nanos.cc/proxy',
+  'https://www.bitrequest.app:8020/',
+  'https://rainstorm.city/api'
+]
+
 const defaultConfig = {
   randomize: true,
-  urls: [
-    'https://rpc.p2pow.online',
-    'https://rpc.nanoprofile.online',
-    'https://mynano.ninja/api/node',
-    'https://nault.nanos.cc/proxy',
-    'https://proxy.powernode.cc/proxy',
-    'https://api.nanex.cc',
-    'https://vault.nanocrawler.cc/api/node-api',
-    'https://node.somenano.com/proxy',
-    'https://proxy.nanos.cc/proxy',
-    'https://www.bitrequest.app:8020/',
-    'https://rainstorm.city/api'
-  ]
+  urls: PUBLIC_RPC_URLS
 }
 
 export default async function rpc(params, config = {}) {

@@ -526,10 +526,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bignumber.js@npm:9.0.2":
+  version: 9.0.2
+  resolution: "bignumber.js@npm:9.0.2"
+  checksum: 8637b71d0a99104b20413c47578953970006fec6b4df796b9dcfd9835ea9c402ea0e727eba9a5ca9f9a393c1d88b6168c5bbe0887598b708d4f8b4870ad62e1f
+  languageName: node
+  linkType: hard
+
 "binary-extensions@npm:^2.0.0":
   version: 2.2.0
   resolution: "binary-extensions@npm:2.2.0"
   checksum: ccd267956c58d2315f5d3ea6757cf09863c5fc703e50fbeb13a7dc849b812ef76e3cf9ca8f35a0c48498776a7478d7b4a0418e1e2b8cb9cb9731f2922aaad7f8
+  languageName: node
+  linkType: hard
+
+"blakejs@npm:1.2.1":
+  version: 1.2.1
+  resolution: "blakejs@npm:1.2.1"
+  checksum: d699ba116cfa21d0b01d12014a03e484dd76d483133e6dc9eb415aa70a119f08beb3bcefb8c71840106a00b542cba77383f8be60cd1f0d4589cb8afb922eefbe
   languageName: node
   linkType: hard
 
@@ -571,6 +585,13 @@ __metadata:
   bin:
     browserslist: cli.js
   checksum: 18e09beeae32e69fea45fc3642240fb63027b1460d90e24da86377177dca3d82c80f8fa44469d95109e3962f08eb2a23e03037bd5e1f1ec38e4866e2a8572435
+  languageName: node
+  linkType: hard
+
+"byte-base64@npm:1.1.0":
+  version: 1.1.0
+  resolution: "byte-base64@npm:1.1.0"
+  checksum: 95851fc758882ba6b28422d70c685f86257eb635be10eb37528765f39fc1c8766972f9bb39e0684539fafc7d9625145d26e5ab310a52c9eb9df3506952586e0c
   languageName: node
   linkType: hard
 
@@ -799,6 +820,13 @@ __metadata:
     shebang-command: ^2.0.0
     which: ^2.0.1
   checksum: 671cc7c7288c3a8406f3c69a3ae2fc85555c04169e9d611def9a675635472614f1c0ed0ef80955d5b6d4e724f6ced67f0ad1bb006c2ea643488fcfef994d7f52
+  languageName: node
+  linkType: hard
+
+"crypto-js@npm:3.1.9-1":
+  version: 3.1.9-1
+  resolution: "crypto-js@npm:3.1.9-1"
+  checksum: 2dc7a7024fd02a88ef3f673e949c7a98d0d61da8b57c95a8207e22d8dd2135b29124bc28dfb2770d8a5f3cf8a46d81e68b3a4bde982a71bae479a9ce666f4cd8
   languageName: node
   linkType: hard
 
@@ -2216,9 +2244,22 @@ __metadata:
     eslint-plugin-node: ^11.1.0
     eslint-plugin-promise: ^6.0.0
     mocha: ^9.2.2
+    nanocurrency-web: ^1.4.2
     prettier: ^2.6.2
   languageName: unknown
   linkType: soft
+
+"nanocurrency-web@npm:^1.4.2":
+  version: 1.4.2
+  resolution: "nanocurrency-web@npm:1.4.2"
+  dependencies:
+    bignumber.js: 9.0.2
+    blakejs: 1.2.1
+    byte-base64: 1.1.0
+    crypto-js: 3.1.9-1
+  checksum: b80f74f1345bba3fa3f5ceaebc88dd5b81413eac4da33eaf782e0059f24f4a02b4c2a82c9f674324389ef03140f5570353f42d65236c71bebf17eb9215136e23
+  languageName: node
+  linkType: hard
 
 "nanoid@npm:3.3.1":
   version: 3.3.1

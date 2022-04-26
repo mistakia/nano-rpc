@@ -1,7 +1,60 @@
 import { block } from 'nanocurrency-web'
 
 import rpc from './rpc.js'
-import constants from './constants.js'
+import * as constants from './constants.js'
+
+// broadcasts a block and waits for its confirmation
+export const confirmBlock = ({ ws, block, hash, rpcUrl }) =>
+  new Promise((resolve, reject) => {
+    // register confirmation listener
+    const listener = (data) => {
+      const d = JSON.parse(data)
+      if (d.topic !== 'confirmation') return
+      if (d.message.hash !== hash) return
+
+      // update websocket subscription
+      ws.send(
+        JSON.stringify({
+          action: 'update',
+          topic: 'confirmation',
+          options: {
+            accounts_del: [block.account]
+          }
+        })
+      )
+
+      // unregister event listener
+      ws.off('message', listener)
+
+      resolve(hash)
+    }
+
+    ws.on('message', listener)
+
+    // register node websocket subscription
+    ws.send(
+      JSON.stringify({
+        action: 'update',
+        topic: 'confirmation',
+        options: {
+          accounts_add: [block.account]
+        }
+      })
+    )
+
+    // broadcast block
+    rpc(
+      {
+        action: 'process',
+        json_block: true,
+        async: true,
+        block
+      },
+      {
+        url: rpcUrl
+      }
+    )
+  })
 
 export const createSendBlock = async ({
   accountInfo,
